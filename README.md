@@ -18,6 +18,10 @@ This repository contains my solutions for the Igniters Hub Internship Assignment
 
 ## **Run the program**:
 
+```bash
+npm install
+```
+
 ### Challenge 1 – Expression Evaluator
 
 ```bash
