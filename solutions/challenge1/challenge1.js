@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 
 // Function to evaluate expressions
 function evaluateExpression(expression) {
@@ -38,5 +39,7 @@ function processFile(inputFile, outputFile) {
   console.log(`✅ Output saved to ${outputFile}`);
 }
 
+const inputFilePath = path.join(__dirname, "input.txt");
+const outputFilePath = path.join(__dirname, "output.txt");
 // Run the program
-processFile("input.txt", "output.txt");
+processFile(inputFilePath, outputFilePath);

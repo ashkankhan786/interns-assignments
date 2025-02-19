@@ -3,8 +3,7 @@ const nodemailer = require("nodemailer");
 const path = require("path");
 const fs = require("fs");
 
-//const recipientEmail = "hr@ignitershub.com";
-const recipientEmail = "ashkankhan469@gmail.com";
+const recipientEmail = "hr@ignitershub.com";
 const subject = "Challenge 3 Completed";
 const body = `
   Name: Mohd Ashkan Khan
@@ -16,7 +15,7 @@ const body = `
 const attachmentPath = path.join(__dirname, "attachments", "img1.jpeg");
 
 if (!fs.existsSync(attachmentPath)) {
-  console.error("❌ Attachment not found!");
+  console.error("Attachment not found!");
   process.exit(1);
 }
 
@@ -50,8 +49,8 @@ const mailOptions = {
 // Send Email
 transporter.sendMail(mailOptions, (error, info) => {
   if (error) {
-    console.error("❌ Error sending email:", error);
+    console.error("Error sending email:", error);
   } else {
-    console.log("✅ Email sent:", info.response);
+    console.log("Email sent:", info.response);
   }
 });
